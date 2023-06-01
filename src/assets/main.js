@@ -1,11 +1,15 @@
+//definir api
 const API = 'https://youtube-v31.p.rapidapi.com/search?channelId=UCc7_woMAIVIW2mAr1rPCsFQ&part=snippet%2Cid&order=date&maxResults=10'
+import API_KEY from ".env"
 
+//agregando referencia del elemento dónde queremos colocar el llamado de la api
 const content=null||document.getElementById("content")
 
+//definir opciones de conexión de api
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': '37d94d5ccbmshf3c8f135a3f1889p11ce55jsnebef264b4ccf',
+        'X-RapidAPI-Key': API_KEY,
         'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
     }
 };
@@ -17,7 +21,7 @@ async function fetchData(urlApi){
     return data;
 }
 
-//función que se llama a sí misma
+//función que se ejecuta automáticamente y se llama a sí misma
 (async () => {
     try{
         const videos = await fetchData(API);
@@ -36,9 +40,12 @@ async function fetchData(urlApi){
         </div>
       </div></a>`).slice(0,4).join('')}
         `;
+        //añadir arreglo de items a elemento "content"
         content.innerHTML=view;
 
     } catch(error) {
+
+      //reto: añadir página de error
       console.log(error);
     }
 })();
