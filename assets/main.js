@@ -1,6 +1,5 @@
 //definir api
 const API = 'https://youtube-v31.p.rapidapi.com/search?channelId=UCc7_woMAIVIW2mAr1rPCsFQ&part=snippet%2Cid&order=date&maxResults=10'
-import API_KEY from ".env"
 
 //agregando referencia del elemento dónde queremos colocar el llamado de la api
 const content=null||document.getElementById("content")
@@ -9,7 +8,7 @@ const content=null||document.getElementById("content")
 const options = {
     method: 'GET',
     headers: {
-        'X-RapidAPI-Key': API_KEY,
+        'X-RapidAPI-Key': '37d94d5ccbmshf3c8f135a3f1889p11ce55jsnebef264b4ccf',
         'X-RapidAPI-Host': 'youtube-v31.p.rapidapi.com'
     }
 };
