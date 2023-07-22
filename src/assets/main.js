@@ -27,20 +27,16 @@ async function fetchData(urlApi){
         //generar un template string para la iteración de elementos recuperados en "const=videos"
         let view=`
         ${videos.items.map(video=>`
-        <a href="https://youtube.com/watch?v=${video.id.videoId}" target="_blank">
-          <div class="group relative">
-            <div
-              class="w-full bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:aspect-none">
+          <a href="https://youtube.com/watch?v=${video.id.videoId}" target="_blank">
+            <div class="w-80 mt-px mb-2.5 overflow-hidden border">
               <img src="${video.snippet.thumbnails.high.url}" alt="${video.snippet.description}" class="w-full">
             </div>
             <div class="mt-4 flex justify-between">
               <h3 class="text-sm text-gray-700">
-                <span aria-hidden="true" class="absolute inset-0"></span>
                 ${video.snippet.title}
               </h3>
             </div>
-          </div>
-        </a>`).slice(0,4).join('')}
+          </a>`).slice(0,10).join('')}
         `;
         //añadir arreglo de items a elemento "content"
         content.innerHTML=view;
