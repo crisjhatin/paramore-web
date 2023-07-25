@@ -4,16 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d src"
+    "deploy": "gh-pages -d public",
+    "dev": "tailwindcss -i ./src/css/tailwind.css -o ./public/css/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.14",
     "gh-pages": "^5.0.0",
-    "tailwindcss": "^3.3.2"
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3"
   },
   "dependencies": {
-    "flowbite": "^1.6.5"
+    "flowbite": "^1.7.0"
   }
 }
