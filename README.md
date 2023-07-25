@@ -2,4 +2,3 @@
 ## Resources:
 - Tailwind.css
 - Flowbite
-- 
