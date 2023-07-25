@@ -1,14 +1,14 @@
 <!doctype html>
 <html>
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/tailwind.css">
   <link rel="icon" href="./logos/logo.ico">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.css"  rel="stylesheet" />
   <!--se agrega "defer" para que el script cargue “en segundo plano” y se ejecute cuando el DOM esté completo. -->
-  <script defer type="module" src="./assets/main.js"></script>
+  <script defer type="module" src="/public/assets/main.js"></script>
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.7.0/flowbite.min.css" rel="stylesheet" /> -->
+  <title>Paramore web</title>
 </head>
 
 <body>
@@ -25,7 +25,7 @@
               <div class="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                 <div class="flex items-center justify-between w-full md:w-auto">
                   <a href="#">
-                    <img class="h-14 w-auto sm:h-10" src="./logos/logo.ico">
+                    <img class="w-auto sm:h-10" src="./logos/logo.ico">
                   </a>
                 </div>
               </div>
@@ -37,7 +37,6 @@
             </nav>
           </div>
         </div>
-
         <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
           <div class="sm:text-center lg:text-left">
             <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
@@ -50,35 +49,29 @@
         </main>
       </div>
     </div>
-    <!--
-    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
-      <img class="h-56 object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-        src="images/paramore-portrait.jpeg" alt="">
-    </div>
-    -->
     <!-- Carousel-->
     <div id="default-carousel" class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2" data-carousel="slide">
       <!-- Carousel wrapper -->
       <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
           <!-- Item 1 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="images/paramore-portrait.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              <img src="images/after-laughter.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
           <!-- Item 2 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="images/after-laughter.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              <img src="images/all-we-know-is-falling.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
           <!-- Item 3 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="images/all-we-know-is-falling.jpeg"class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              <img src="images/paramore-2007.jpeg"class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
           <!-- Item 4 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="images/paramore-2007.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              <img src="images/paramore-2009.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
           <!-- Item 5 -->
           <div class="hidden duration-700 ease-in-out" data-carousel-item>
-              <img src="images/paramore-2009.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+              <img src="images/paramore-portrait.jpeg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
           </div>
       </div>
       <!-- Slider indicators -->
@@ -103,13 +96,25 @@
           </span>
       </button>
     </div>
-
   </div>
-  <div class="bg-white">
-    <div class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-      <h2 class="text-2xl font-extrabold tracking-tight text-gray-900">Last YouTube Videos</h2>
-      <div class="mt-6 grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8" id="content">
-        <!-- content -->
+
+  <div class="bg-white max-w-2xl mx-auto py-4 px-4 sm:py-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <h2 class="text-2xl py-4 font-extrabold tracking-tight text-gray-900">Last YouTube Videos</h2>
+    <div class="main-scroll-div w-11/12 h-full flex items-center justify-between">
+      <div class="flex items-start">
+        <button class="origin-center rotate-180 w-12 outline-none pt-0 pb-5 cursor-pointer border-none" onclick="scrolll();">
+          <img src="./logos/arrow.svg" alt="left">
+        </button>
+      </div>
+      <div class="cover max-w-2xl lg:max-w-7xl relative before:absolute before:content-[''] before:left-0 before:top-0 before:z-50 before:h-full before:w-36 after:absolute after:content-[''] after:right-0 after:top-0 after:z-50 after:h-full after:w-36">
+        <div class="scroll-images h-auto flex justify-start items-center overflow-auto relative scroll-smooth no-scrollbar" id="content">
+          <!-- content -->
+        </div>
+      </div>
+      <div class="flex">
+        <button class="w-12 outline-none pt-0 pb-5 cursor-pointer border-none" onclick="scrollr();">
+          <img src="./logos/arrow.svg" alt="right">
+        </button>
       </div>
     </div>
   </div>
@@ -134,6 +139,18 @@
       </div>
     </div>
   </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+  <script src="flowbite/flowbite.min.js"></script>
+  <script>
+    function scrolll(){
+    console.log("scroll left");
+    var left=document.querySelector(".scroll-images");
+    left.scrollBy(-350,0)
+    }
+    function scrollr(){
+      var right=document.querySelector(".scroll-images")
+      right.scrollBy(350,0);
+    }
+  </script>
+
 </body>
 </html>
