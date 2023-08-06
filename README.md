@@ -2,3 +2,4 @@
 ## Resources:
 - Tailwind.css
 - Flowbite
+- RapidAPI
